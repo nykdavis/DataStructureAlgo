@@ -19,6 +19,12 @@ public class DoubleLinkedListMain {
 		System.out.println("\n\nGoing to insert the element at last");
 		list.insertLast(12);
 		list.display();
+		
+		
+		//Insert an Element after a given node
+		System.out.println("\n\nInsert an Element after a given node.");
+		list.insertElementAfteGivenNode(7,6);
+		list.display();
 
 	}
 

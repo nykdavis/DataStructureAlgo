@@ -73,5 +73,34 @@ public class DoubleLinkedList {
 		size++;
 	}
 	
+	//Find a Node
+	//Here we are passing the node value and we need to find the node node depend upon the given value
+	public Node find(int nodeValue) {
+		Node temp = head;
+		while(temp != null) {
+			if(temp.value == nodeValue) {
+				return temp;
+			}
+			temp = temp.next;
+		}
+		return null;
+	}
+	
+	//Insert Element after a given value
+	public boolean insertElementAfteGivenNode(int value,int after) {
+		Node p= find(after);
+		if(p == null) {
+			System.out.println("Does not Exist.");
+		}
+		Node node = new Node(value);
+		node.prev = p;
+		node.next = p.next;
+		p.next = node;
+		if(node.next != null) {
+			node.next.prev = node;
+		}
+		return true;
+	}
+	
 
 }
