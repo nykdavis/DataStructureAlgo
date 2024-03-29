@@ -1,4 +1,4 @@
-package com.davis.piersqure.array.leetCode;
+package com.davis.piersqure.array.leetCode.array.string;
 
 public class DuplicateRemovalSortedSecond {
 
