@@ -9,7 +9,6 @@ public class DuplicateRemovalSortedSecond {
 		//output: 0,0,1,1,2,3,3
 		
 		int index =0;
-		int value = 0;
 		for(int i =0 ; i< arr.length; i++) {
 			if(arr[index]!= arr[i]) {		
 				arr[++index]=arr[i];
