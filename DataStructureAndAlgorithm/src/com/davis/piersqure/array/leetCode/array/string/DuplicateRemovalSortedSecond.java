@@ -1,27 +1,34 @@
 package com.davis.piersqure.array.leetCode.array.string;
 
 public class DuplicateRemovalSortedSecond {
+	
+	public static int removeDuplicates(int[] nums) {
+       int i = 2;
+       int j = 2;
+       while(i<nums.length) {
+    	   if(nums[i]!=nums[j-2]) {
+    		   nums[j]=nums[i];
+    		   j++;
+    	   }
+    	   i++;
+       }  
+       
+       int[] newArr = new int[j];
+       System.arraycopy(nums, 0, newArr, 0, j);
+       
+       for(int val:newArr) {
+    	   System.out.print(val+" ");
+       }
+       return j;      
+   }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int []arr = {0,0,1,1,1,1,2,3,3};
+		int []nums = {1,1,1,2,2,3};
 		//output: 0,0,1,1,2,3,3
 		
-		int index =0;
-		for(int i =0 ; i< arr.length; i++) {
-			if(arr[index]!= arr[i]) {		
-				arr[++index]=arr[i];
-			}
-		}
-		
-		
-		int []newArr = new int[index+1];
-		System.arraycopy(arr, 0, newArr, 0, index+1);
-		
-		for(int a:newArr) {
-			System.out.print(a+ " ");
-		}
+		System.out.println("\narray length : "+removeDuplicates(nums));
 		
 	}
 
