@@ -1,5 +1,7 @@
 package com.davis.piersqure.array.leetCode.twoPointer;
 
+//392. Is Subsequence
+//LeetCode problem: easy: two pointer
 public class IsSubsequencePractice {
 	// s = "abc", t = "ahbgdc" true
 	// s = "axc", t = "ahbgdc" false
